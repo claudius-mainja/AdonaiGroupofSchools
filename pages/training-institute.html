@@ -3,78 +3,91 @@
 <head>
   <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adonai Group of Schools - Educating Minds, Igniting Excellence</title>
+    <title>Adonai Training Institute | Industrial & Skills Training in Harare</title>
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/main.css">
+    <link rel="stylesheet" href="/src/about.css">
+    <link rel="stylesheet" href="/src/institute.css">
 </head>
-<body>
+<body class="bg-white text-gray-800">
   <!-- Navbar starts here -->
     <nav class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+            <div class="flex justify-between items-center h-16 sm:h-20">
                 <!-- Logo -->
-                <div class="flex items-center space-x-3 animate-slideInLeft">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-900 to-sky-800 rounded-lg flex items-center justify-center">
-                        <span class="text-white font-montserrat font-bold text-xl">AG</span>
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-900 to-sky-800 rounded-lg flex items-center justify-center shadow-md">
+                        <span class="text-white font-montserrat font-bold text-lg sm:text-xl">AG</span>
                     </div>
                     <div>
-                        <h1 class="font-montserrat font-bold text-blue-900 text-lg">Adonai Group</h1>
+                        <h1 class="font-montserrat font-bold text-blue-900 text-base sm:text-lg leading-tight">Adonai Group</h1>
                         <p class="text-xs text-sky-800">of Schools</p>
                     </div>
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="/index.html" class="text-blue-900 hover:text-sky-800 transition-colors duration-300 font-medium">Home</a>
-                    <a href="/pages/about.html" class="text-blue-900 hover:text-sky-800 transition-colors duration-300 font-medium">About Us</a>
+                <div class="hidden lg:flex items-center space-x-1 xl:space-x-2">
+                    <a href="/index.html" class="text-blue-900 hover:bg-sky-800 hover:text-white transition-colors duration-300 font-medium px-4 xl:px-6 py-3 rounded-lg">Home</a>
+                    <a href="/pages/about.html" class="text-blue-900 hover:bg-sky-800 hover:text-white px-4 xl:px-6 py-3 rounded-lg transition-colors duration-300 font-medium">About Us</a>
                     
                     <!-- Dropdown -->
-                    <div class="dropdown relative">
-                        <button class="text-blue-900 hover:text-sky-800 transition-colors duration-300 font-medium flex items-center">
+                    <div class="relative">
+                        <button id="schoolsDropdown" class="text-blue-900 hover:bg-sky-800 hover:text-white px-4 xl:px-6 py-3 rounded-lg transition-colors duration-300 font-medium flex items-center">
                             Schools
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-4 h-4 ml-1 transition-transform duration-300" id="dropdownIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </button>
-                        <div class="dropdown-menu hidden absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100">
-                            <a href="/pages/primary-school.html" class="block px-4 py-3 text-blue-900 hover:bg-sky-50 transition-colors duration-200">Primary School</a>
-                            <a href="/pages/secondary-school.html" class="block px-4 py-3 text-blue-900 hover:bg-sky-50 transition-colors duration-200">Secondary School</a>
-                            <a href="/pages/training-institute.html" class="block px-4 py-3 text-blue-900 hover:bg-sky-50 transition-colors duration-200">Training Institute</a>
+                        <div id="schoolsMenu" class="hidden absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-gray-100 overflow-hidden">
+                            <a href="/pages/primary-school.html" class="block px-4 py-3 text-blue-900 hover:bg-sky-50 hover:text-sky-800 transition-colors duration-200 border-b border-gray-100">Primary School</a>
+                            <a href="/pages/secondary-school.html" class="block px-4 py-3 text-blue-900 hover:bg-sky-50 hover:text-sky-800 transition-colors duration-200 border-b border-gray-100">Secondary School</a>
+                            <a href="/pages/training-institute.html" class="block px-4 py-3 text-blue-900 hover:bg-sky-50 hover:text-sky-800 transition-colors duration-200">Training Institute</a>
                         </div>
                     </div>
                     
-                    <a href="/pages/contact.html" class="text-blue-900 hover:text-sky-800 transition-colors duration-300 font-medium">Contact Us</a>
-                    <a href="mailto:info@adonaigroupofschools.ac.zw" target="_blank" class="bg-gradient-to-r from-blue-900 to-sky-800 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                    <a href="/pages/contact.html" class="text-blue-900 hover:bg-sky-800 hover:text-white px-4 xl:px-6 py-3 rounded-lg transition-colors duration-300 font-medium">Contact Us</a>
+                    <a href="mailto:info@adonaigroupofschools.ac.zw" target="_blank" class="bg-gradient-to-r from-blue-900 to-sky-800 text-white px-4 xl:px-6 py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300 ml-2">
                         Enroll Now
                     </a>
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button class="lg:hidden text-blue-900" onclick="toggleMobileMenu()">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button class="lg:hidden text-blue-900 p-2 rounded-lg hover:bg-sky-50 transition-colors" onclick="toggleMobileMenu()">
+                    <svg id="hamburgerIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="mobile-menu lg:hidden">
-                <div class="py-4 space-y-3">
-                    <a href="/index.html" class="block text-blue-900 hover:text-sky-800 transition-colors duration-300 font-medium py-2">Home</a>
-                    <a href="/pages/about.html" class="block text-blue-900 hover:text-sky-800 transition-colors duration-300 font-medium py-2">About Us</a>
-                    <div class="py-2">
-                        <p class="text-blue-900 font-medium mb-2">Schools</p>
-                        <div class="pl-4 space-y-2">
-                            <a href="/pages/primary-school.html" class="block text-sky-800 hover:text-blue-900 transition-colors duration-200">Primary School</a>
-                            <a href="/pages/secondary-school.html" class="block text-sky-800 hover:text-blue-900 transition-colors duration-200">Secondary School</a>
-                            <a href="/pages/training-institute.html" class="block text-sky-800 hover:text-blue-900 transition-colors duration-200">Training Institute</a>
+            <div id="mobileMenu" class="hidden lg:hidden border-t border-gray-100 overflow-hidden transition-all duration-300">
+                <div class="py-4 space-y-1 max-h-screen overflow-y-auto">
+                    <a href="/index.html" class="block text-blue-900 hover:bg-sky-50 hover:text-sky-800 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">Home</a>
+                    <a href="/pages/about.html" class="block text-blue-900 hover:bg-sky-50 hover:text-sky-800 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">About Us</a>
+                    
+                    <!-- Mobile Schools Dropdown -->
+                    <div>
+                        <button id="mobileSchoolsDropdown" class="w-full text-left text-blue-900 hover:bg-sky-50 hover:text-sky-800 transition-colors duration-300 font-medium py-3 px-4 rounded-lg flex justify-between items-center">
+                            Schools
+                            <svg class="w-4 h-4 transition-transform duration-300" id="mobileDropdownIcon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div id="mobileSchoolsMenu" class="hidden pl-4 space-y-1 mt-1">
+                            <a href="/pages/primary-school.html" class="block text-sky-800 hover:bg-sky-50 hover:text-blue-900 transition-colors duration-200 py-2 px-4 rounded-lg">Primary School</a>
+                            <a href="/pages/secondary-school.html" class="block text-sky-800 hover:bg-sky-50 hover:text-blue-900 transition-colors duration-200 py-2 px-4 rounded-lg">Secondary School</a>
+                            <a href="/pages/training-institute.html" class="block text-sky-800 hover:bg-sky-50 hover:text-blue-900 transition-colors duration-200 py-2 px-4 rounded-lg">Training Institute</a>
                         </div>
                     </div>
-                    <a href="/pages/contact.html" class="block text-blue-900 hover:text-sky-800 transition-colors duration-300 font-medium py-2">Contact Us</a>
-                    <a href="mailto:info@adonaigroupofschools.ac.zw" class="block bg-gradient-to-r from-blue-900 to-sky-800 text-white px-6 py-3 rounded-lg font-semibold text-center mt-4">
+                    
+                    <a href="/pages/contact.html" class="block text-blue-900 hover:bg-sky-50 hover:text-sky-800 transition-colors duration-300 font-medium py-3 px-4 rounded-lg">Contact Us</a>
+                    <a href="mailto:info@adonaigroupofschools.ac.zw" class="block bg-gradient-to-r from-blue-900 to-sky-800 text-white px-6 py-3 rounded-lg font-semibold text-center mt-4 mx-4 hover:shadow-lg transform hover:scale-105 transition-all duration-300">
                         Enroll Now
                     </a>
                 </div>
@@ -83,6 +96,336 @@
     </nav>
     <!--Navbar ends here-->
 
+            <!-- Hero Section -->
+    <section class="relative text-white py-24 md:py-40 lg:py-48 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="/assets/images/instituemainhero.png" alt="Adonai Schools Campus" class="w-full h-full object-cover">
+            <!-- Gradient Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-900/85 via-sky-800/80 to-blue-900/85 blend-mix-multiply"></div>
+            <!-- Animated Overlay Elements -->
+            <div class="absolute inset-0 opacity-20">
+                <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-md blur-3xl animate-pulse"></div>
+                <div class="absolute bottom-0 right-0 w-96 h-96 bg-sky-300 rounded-md blur-3xl animate-pulse"
+                    style="animation-delay: 1s;"></div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div
+                    class="inline-block mb-6 px-6 py-2 bg-white/10 backdrop-blur-sm rounded-md border border-white/20 animate-fade-in-up">
+                    <p class="text-sm md:text-base font-medium">Empowering Skills for Employment and Entrepreneurship </p>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-montserrat uppercase font-bold mb-6 animate-fade-in-up delay-100">Adonai Training Institute</h1>
+
+                <p
+                    class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-10 animate-fade-in-up delay-300 leading-relaxed">
+  Adonai Training Institute provides practical, career-focused training designed to equip students with employable and entrepreneurial skills..</p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-400">
+                    <a href="#contact"
+                        class="group px-8 py-4 bg-white text-blue-900 rounded-md font-semibold text-lg transition-all duration-300 hover:bg-gray-100 hover:shadow-2xl hover:scale-105 inline-flex items-center">
+                        Apply Now
+                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="/pages/about.html"
+                        class="px-8 py-4 bg-transparent border-2 border-white text-white rounded-md font-semibold text-lg transition-all duration-300 hover:bg-white hover:text-blue-900 hover:shadow-2xl hover:scale-105 inline-flex items-center">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section ends here -->
+
+    <!-- Institute Overview Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-900 via-sky-800 to-blue-900">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-left">
+                    <h2 class="text-4xl lg:text-4xl font-bold text-white uppercase mb-6">Institute Overview</h2>
+                    <p class="text-blue-100 mb-8 leading-relaxed">
+                        Operating under the Ministry of Higher & Tertiary Education, the institute focuses on hands-on industrial training aligned with market demands.
+                    </p>
+                    <a href="#admissions" class="inline-block bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        Enroll for 2026 Intake
+                    </a>
+                </div>
+                <div class="animate-slide-right">
+                    <img src="/assets/images/InstituteHero.png" alt="Adonai Training Institute" class="rounded-2xl shadow-2xl w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of school overview-->
+
+    <!-- Training Approach Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16 animate-fade-up">
+                <h2 class="text-3xl lg:text-4xl font-bold uppercase text-blue-900 mb-2">Our Training Approach</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Industry-aligned practical training for real-world success</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-up delay-100">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-900 to-sky-800 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Practical-Based Learning</h3>
+                    <p class="text-gray-600 text-center">Hands-on training with real equipment and scenarios</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-up delay-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-900 to-sky-800 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Industry-Relevant Skills</h3>
+                    <p class="text-gray-600 text-center">Training aligned with current market demands</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-up delay-300">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-900 to-sky-800 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Accredited Training</h3>
+                    <p class="text-gray-600 text-center">Recognized certification framework</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-up delay-400">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-900 to-sky-800 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3 text-center">Job Readiness</h3>
+                    <p class="text-gray-600 text-center">Skills for employment and self-employment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Offered Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16 animate-fade-up">
+                <h2 class="text-4xl lg:text-4xl font-bold text-blue-900 uppercase mb-2">Courses Offered</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Career-focused programs designed for the modern workforce</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course Card 1 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-100">
+                    <img src="/assets/images/cosmetology.png" alt="Cosmetology" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Cosmetology</h3>
+                        <p class="text-blue-100 text-sm">Beauty and grooming professional training</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 2 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-200">
+                    <img src="/assets/images/Hospitality and Housekeeping.png" alt="Hospitality" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-800 via-sky-800/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Hospitality & Housekeeping</h3>
+                        <p class="text-blue-100 text-sm">Hotel and service industry excellence</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 3 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-300">
+                    <img src="/assets/images/Nurse aid.png" alt="Nurse Aid" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Nurse Aid</h3>
+                        <p class="text-blue-100 text-sm">Healthcare support and patient care</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 4 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-100">
+                    <img src="/assets/images/agriculture.png" alt="Agriculture" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-800 via-sky-800/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Agriculture</h3>
+                        <p class="text-blue-100 text-sm">Modern farming and agribusiness skills</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 5 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-200">
+                    <img src="/assets/images/braille.png" alt="Braille" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Braille</h3>
+                        <p class="text-blue-100 text-sm">Inclusive education and communication</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 6 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-300">
+                    <img src="/assets/images/mechanic.png" alt="Motor Mechanics" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-800 via-sky-800/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Motor Mechanics</h3>
+                        <p class="text-blue-100 text-sm">Automotive repair and maintenance</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 7 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-100">
+                    <img src="/assets/images/fashion.png" alt="Clothing Technology" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Clothing Technology</h3>
+                        <p class="text-blue-100 text-sm">Fashion design and garment construction</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 8 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-200">
+                    <img src="/assets/images/bricklaying.png" alt="Bricklaying" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-800 via-sky-800/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Bricklaying</h3>
+                        <p class="text-blue-100 text-sm">Construction and masonry expertise</p>
+                    </div>
+                </div>
+
+                <!-- Course Card 9 -->
+                <div class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-scale delay-300">
+                    <img src="/assets/images/music.png" alt="Music" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900 via-blue-900/70 to-transparent opacity-90"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Music</h3>
+                        <p class="text-blue-100 text-sm">Musical performance and theory</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions CTA Section -->
+    <section id="admissions" class="py-20 bg-gradient-to-br from-blue-900 via-sky-800 to-blue-900 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 lg:px-20 relative z-10">
+            <div class="max-w-4xl mx-auto text-center animate-fade-up">
+                <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                    <p class="text-white font-semibold uppercase">📢 Enrollment In Progress</p>
+                </div>
+                
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-100 uppercase mb-6">Join the 2026 Intake</h2>
+                <p class="text-xl text-blue-100 mb-8 leading-relaxed">
+                    Transform your future with practical skills that lead to employment and entrepreneurship opportunities
+                </p>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 mb-8 animate-fade-up delay-200">
+                    <h3 class="text-2xl font-bold text-white mb-6">Entry Requirements</h3>
+                    <div class="grid md:grid-cols-2 gap-6 text-left">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-blue-200 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-blue-100">Basic educational background (varies by course)</p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-blue-200 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <p class="text-blue-100">Commitment to skills development</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-up delay-300">
+                    <a href="tel:+263772429161" class="inline-flex items-center justify-center bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        Call to Enroll
+                    </a>
+                    <a href="#contact" class="inline-flex items-center justify-center bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300 transform hover:scale-105">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        Visit Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Showcase Section  to use after we have the images
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 lg:px-20">
+            <div class="text-center mb-16 animate-fade-up">
+                <h2 class="text-4xl lg:text-5xl font-bold text-blue-900 mb-4">Our Learning Environment</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">State-of-the-art facilities for practical skill development</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="relative overflow-hidden rounded-2xl shadow-xl group animate-slide-left">
+                    <img src="/assets/images/training-facility.png" alt="Training Facility" class="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex items-end p-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Modern Training Facilities</h3>
+                            <p class="text-blue-100">Equipped with industry-standard tools and equipment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl shadow-xl group animate-slide-right">
+                    <img src="/assets/images/students-learning.png" alt="Students Learning" class="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-800/80 to-transparent flex items-end p-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Hands-On Training</h3>
+                            <p class="text-blue-100">Real-world experience in every course</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl shadow-xl group animate-slide-left delay-200">
+                    <img src="/assets/images/workshop.png" alt="Workshop" class="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-sky-800/80 to-transparent flex items-end p-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Practical Workshops</h3>
+                            <p class="text-blue-100">Learn by doing with expert guidance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative overflow-hidden rounded-2xl shadow-xl group animate-slide-right delay-200">
+                    <img src="/assets/images/graduation.png" alt="Graduation" class="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-blue-900/80 to-transparent flex items-end p-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Success Stories</h3>
+                            <p class="text-blue-100">Graduates making impact in their communities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
 
 
      <!-- Footer starts here-->
@@ -148,7 +491,7 @@
                             <svg class="w-5 h-5 text-sky-300 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <span class="text-sky-100">info@adonaigroup.ac.zw</span>
+                            <span class="text-sky-100">info@adonaigroupofschools.ac.zw</span>
                         </li>
                     </ul>
                 </div>
@@ -180,7 +523,7 @@
                         </a>
                     </div>
                     
-                    <p class="text-sky-200 text-sm">© 2024 Adonai Group of Schools. All rights reserved.</p>
+                    <p class="text-sky-200 text-sm">© 2026 Adonai Group of Schools. All rights reserved.</p>
                 </div>
             </div>
 
